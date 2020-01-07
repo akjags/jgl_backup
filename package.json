@@ -1,0 +1,33 @@
+{
+  "name": "jgl",
+  "version": "1.0.0",
+  "description": "Javascript graphics library",
+  "main": "jgl.server.js",
+  "dependencies": {
+    "debug": "^4.1.1",
+    "ejs": "^3.0.1",
+    "express": "^4.16.3",
+    "helmet": "^3.21.2",
+    "jsonfile": "^2.4.0",
+    "lodash": "^4.17.15",
+    "mathjs": "^5.1.0",
+    "mkdirp": "^0.5.1",
+    "mturk-api": "^3.0.2",
+    "socket.io": "^2.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:build": "documentation build assets/js/** -f html -o docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbirman/jgl.git"
+  },
+  "author": "Dan Birman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dbirman/jgl/issues"
+  },
+  "homepage": "https://github.com/dbirman/jgl#readme"
+}

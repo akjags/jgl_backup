@@ -1,0 +1,13 @@
+{
+ "_cosubSpecVersion": 2,
+ "Url": "https://stanford.edu/~akshayj/ad-texOdd.html",
+ "Title": "Texture Discrimination Task",
+ "Description": "Can you find the odd-one-out?",
+ "Keywords": "Psychology, visual perception, texture discrimination, stanford, research",
+ "Batch": true,
+ "FrameHeight": 450,
+ "AssignmentDuration": "1 hour",
+ "AutoApprovalDelay": "5 minutes",
+ "Reward": "0.6",
+ "QualificationRequirements": []
+}

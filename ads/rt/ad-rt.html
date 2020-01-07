@@ -1,0 +1,102 @@
+<!-- This file is the *AD* for a JGL experiment -->
+
+<!-- This file should be stand-alone. All javascript, CSS, and html
+should be contained within this single file. This helps ensure that 
+the ad can be hosted on any HTTPS server, and still function correctly.
+This is not a best practice, but fuck that shit. -->
+
+<!-- This file relies on: mmturkey, which it uses to submit to mturk -->
+
+<!doctype html>
+<!-- 
+	The ad.html has a very specific format.
+
+	Really there are two "ads" contained within this file.
+
+	The first ad displays to participants who are browsing
+	the Amazon Mechanical Turk site but have not yet accepted
+	your hit.  
+
+	The second part of the ad display after the person selected
+	"Accept HIT" on the Amazon website.  This will reload the
+	ad and will display a button which, when clicked, will pop
+	open a new browser window pointed at your local psiTurk
+	server (assuming it is running and accessible to the Internet).
+
+	See comments throughout for hints
+
+-->
+<html>
+<head>
+	<title>Ad</title>
+	<link rel=stylesheet href="https://jgl.danbirman.com/assets/css/bootstrap.min.css" type="text/css">
+	<link rel=stylesheet href="https://jgl.danbirman.com/assets/css/style.css" type="text/css">
+	<!-- JQUERY -->
+	<script
+	src="https://code.jquery.com/jquery-3.1.1.min.js"
+	integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	crossorigin="anonymous"></script>
+	<script src="https://jgl.danbirman.com/assets/js/mmturkey.js"></script>
+</head>
+<body>
+<!-- 	<div id="container-ad">
+ -->
+		<div id="ad">
+			<div class="row">
+				<div class="col-xs-2">
+					<img id="adlogo" src="https://dbirman.github.io/jgl/assets/images/stanford.png" alt="Lab Logo" />
+				</div>
+				<div class="col-xs-10">
+					<div id="preview" style="display:none">
+						<h1>Call for participants</h1>
+						<p>
+							The Gardner Lab at Stanford University is looking for online participants for a brief psychology experiment. The only requirements are that you are at least 18 years old and are a fluent English 
+							speaker. The task will take about 30 minutes and will pay $4 (approximately $8/hr).
+						</p>
+						<div class="alert alert-danger">
+							<strong>This task can only be completed once.</strong> 
+							If you have already completed this task before the system will not allow you to run again. If this looks familiar please return the HIT so someone else can participate.
+						</div>
+						<p>
+							Otherwise, please click the "Accept HIT" button on the Amazon site above to begin the task.
+						</p>
+					</div>
+
+					<div id="active" style="display:none">
+						<h1>Thank you for accepting this HIT!</h1>
+						<p>
+							By clicking the following URL link, you will be taken to the experiment, including complete instructions and an informed consent agreement.
+						</p>
+						<div class="alert alert-danger">
+							Please keep this page open until the HIT completes.
+						</div>
+						<div class="alert alert-warning">
+							<b>Warning</b>: Please disable pop-up blockers before continuing.
+						</div>
+
+						<button type="button" class="btn btn-primary btn-lg" onClick="openwindow();">Begin Experiment</button>
+					</div>
+
+					<div id="submit" style="display:none">
+						<h1>Thank you for submitting!</h1>
+					</div>
+
+					<div id="emergency" style="display:none">
+						<h1>Don't panic!</h1>
+						<p>It looks like you've been asked to enter a backup code to get paid. Sorry about this!</p>
+						<div class="form-group">
+						  <label for="usr">Backup code:</label>
+						  <input type="text" class="form-control" id="bcode">
+						</div>
+						<button type="button" class="btn btn-primary btn-lg" onClick="submitBackupCode();">Submit Backup Code</button>
+					</div>
+			 	</div>
+			</div>
+		</div> 
+
+	<!-- </div> -->
+  <script src="backups.js"></script>
+  <script src="https://jgl.danbirman.com/assets/js/md5.min.js"></script>
+	<script src="https://jgl.danbirman.com/assets/js/mturk.logic.js"></script>
+</body>
+</html>		

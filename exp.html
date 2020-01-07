@@ -1,0 +1,71 @@
+<!-- 
+  Experiment file
+
+  This file gets linked to from an ad webpage. It requires an HTML query
+  input ?exp= which specifies which folder to pull the experiment files from.
+
+  In addition a ?debug=true flag can be set, in which case the experiment
+  will run without communicating with the server.
+ -->
+<!doctype html>
+<html>
+  <head>
+    <title>Experiment</title>
+
+    <!-- STYLESHEETS -->
+    <link rel=stylesheet href="assets/css/bootstrap.min.css" type="text/css">
+    <link rel=stylesheet href="assets/css/style.css" type="text/css">
+    <link rel=stylesheet href="assets/css/jgl.css" type="text/css">
+
+  </head>
+  <body>
+
+    <div id="dpi" style="height: 1in; width: 1in; left: 100%; position: fixed; top: 100%;"></div>
+
+    <div id="trial">
+    </div>
+
+    <div id="main" class="wrapper style1">
+      <div class="container">
+        <section id="content">
+         
+          <div id="loading" class="overlay row">
+              <div class="row">
+                <div class="col-md-4"></div>
+                <div class="container vertical-center col-md-4" style="text-align:center">
+                  <h2 >Loading... please wait</h2>
+                </div>
+                <div class="col-md-4"></div>
+              </div>
+          </div>
+
+          <div id="error" class="container-error row" style="display:none">
+            <div class="alert alert-danger">
+              <span id="error-text"></span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- CODE -->
+
+    <!-- JQUERY -->
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+
+    <!-- PIXI -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.7.1/pixi.min.js"></script>
+
+    <!-- MATH.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.1.0/math.min.js"></script>
+
+    <!-- LOCAL -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="assets/js/jgl.lib.js"></script>
+    <script src="assets/js/md5.min.js"></script>
+    <script src="assets/js/jgl.client.js"></script>
+  </body>
+</html>

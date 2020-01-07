@@ -1,0 +1,56 @@
+<!-- 
+	This file is for INSTRUCTIONS
+
+	If you have custom templates (e.g. for special kinds of trials) those
+	should be shared for future experiments. Put them in assets/templates
+	and add the relevant code to jgl.client.js
+ -->
+
+<div id="survey-demo">
+	<h1>Below is a quick demographic survey which is optional</h1>
+	<br>
+	<!-- WARNING:
+			The id of the form needs to be the suffix -xxxx on the main id
+			otherwise the incorrect form will be checked during submission
+	 -->
+	<form id="demo">
+	<div class="row question">
+	  <div class="col-md-8">
+			What is your gender?
+		</div>
+		<div class="col-md-4">
+			<select id="gender">
+	  		<option value="">-Select one-</option>
+				<option value="male">Male</option>
+				<option value="female">Female</option>
+			</select>
+		</div>
+	</div>
+	<div class="row question">
+  	<div class="col-md-8">
+			What is your Age?
+		</div>
+		<div class="col-md-4">
+			<input pattern="[0-9.]+" type="number" id="age"></input>
+  	</div>
+	</div>
+
+	</form>
+</div>
+
+<div id="survey-rule">
+	<!-- WARNING:
+			The id of the form needs to be the suffix -xxxx on the main id
+			otherwise the incorrect form will be checked during submission
+	 -->
+	<form id="rule">
+	<div class="row question">
+	  <div class="col-md-12">
+			<p>Please describe the rule you used to make your decisions.</p>
+		</div>
+		<div class="col-md-12">
+			<input type="text" style="width:100%;height:50px" id="ruletext">
+		</div>
+	</div>
+	</form>
+</div>

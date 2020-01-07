@@ -1,0 +1,2 @@
+Time,Action,Data
+2017/03/02 13:30:56,Create,"{u'description': u'A simple game about responding quickly', u'title': u'Reaction time experiment', u'url': u'https://dbirman.github.io/jgl/rt/ad/ad-rt.html', u'assignment_duration': u'1 hour', u'qualifications': {u'location': u'US', u'approval_percentage': 85}, u'frame_height': 450, u'keywords': u'Reaction time, cognitive science', u'auto_approval_delay': u'5 minutes', u'reward': 0.6}"

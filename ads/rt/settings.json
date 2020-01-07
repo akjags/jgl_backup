@@ -1,0 +1,21 @@
+{
+ "_cosubSpecVersion": 2,
+ "Url": "https://jgl.danbirman.com/ads/rt/ad-rt.html",
+ "Title": "Reaction time experiment",
+ "Description": "Testing",
+ "Keywords": "rt",
+ "Batch": false,
+ "FrameHeight": 450,
+ "AssignmentDuration": "1 hour",
+ "AutoApprovalDelay": "5 minutes",
+ "Reward": "0.5",
+ "QualificationRequirements": [
+  {
+   "Name": "Worker_PercentAssignmentsApproved",
+   "Comparator": "GreaterThan",
+   "IntegerValues": [
+    85
+   ]
+  }
+ ]
+}

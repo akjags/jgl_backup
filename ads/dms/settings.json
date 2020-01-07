@@ -1,0 +1,14 @@
+{
+    "title":               "Reaction time experiment",
+    "description":         "Can you learn the rule?",
+    "keywords":            "Psychology, cognitive science, rule learning, stanford, research",
+    "url":                 "https://dbirman.github.io/jgl/ads/dms/ad-dms.html",
+    "frame_height":         450,
+    "assignment_duration":  "1 hour",
+    "auto_approval_delay":  "5 minutes",
+    "reward":               0.60,
+    "qualifications": {
+        "location": "US",
+        "approval_percentage": 85
+    }
+}

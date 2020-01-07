@@ -1,0 +1,18 @@
+{
+    "Title":               "Reaction time experiment",
+    "Description":         "A simple game about responding quickly",
+    "keywords":            "Reaction time, cognitive science",
+    "url":                 "https://dbirman.github.io/jgl/ads/rt/ad-rt.html",
+    "frame_height":         450,
+    "AssignmentDurationInSeconds":  3600,
+    "AutoApprovalDelayInSeconds":  300,
+    "MaxAssignments":9,
+    "Reward":               {
+        "CurrencyCode":"USD",
+        "Amount":0.50
+    },
+    "qualifications": {
+        "location": "US",
+        "approval_percentage": 85
+    }
+}

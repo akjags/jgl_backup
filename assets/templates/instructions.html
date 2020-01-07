@@ -1,0 +1,34 @@
+<div id="instructions">
+  <div id="container-instructions">
+
+  <h1>Instructions</h1>
+
+  <hr>
+
+  <div id="instructionsdiv" class="instructions well">
+    <div id="instructions-end" class="alert alert-warning">
+      <span id="error-text"><b>Warning:</b> When you press next the experiment will start immediately.</span>
+    </div>
+  </div>
+
+  <hr>
+
+    <div class="instructionsnav">
+        <div class="row">
+            <div class="col-xs-2">
+                <button type="button" id="inst-prev" onclick="incInstructions(-1);" class="btn btn-primary btn-lg continue">
+                <span class="glyphicon glyphicon-arrow-left"></span> Prev 
+                </button>
+            </div>
+            <div class="col-xs-8">
+            </div>
+            <div class="col-xs-2">
+                <button type="button" id="inst-next" class="btn btn-primary btn-lg continue" onclick="incInstructions(1);">
+                Next <span class="glyphicon glyphicon-arrow-right"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
