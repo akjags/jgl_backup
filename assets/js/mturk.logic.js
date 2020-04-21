@@ -24,16 +24,16 @@ function launch() {
 let experimentWindow,path,expName;
 
 //let server = 'localhost:8080';
-//let server = 'gru.stanford.edu:4043';
-let server = 'jgl-texture.herokuapp.com:8080';
+let server = 'gru.stanford.edu:8080';
+//let server = 'jgl-texture.herokuapp.com:8080';
 
 function openwindow() {
 	path = location.pathname;
 	expName = path.substr(path.indexOf('ad-')+3,path.indexOf('.html')-(path.indexOf('ad-')+3));
 	if (debug) {	
-		experimentWindow = window.open('http://'+server+'/exp.html?exp='+expName+'&debug=1','Popup','toolbar=no,status=no,menubar=no,scrollbars=yes,resizable=no,width='+1024+',height='+768+'');
+		experimentWindow = window.open('https://'+server+'/exp.html?exp='+expName+'&debug=1','Popup','toolbar=no,status=no,menubar=no,scrollbars=yes,resizable=no,width='+1024+',height='+768+'');
 	} else {
-		experimentWindow = window.open('http://'+server+'/exp.html?exp='+expName,'Popup','toolbar=no,status=no,menubar=no,scrollbars=yes,resizable=no,width='+1024+',height='+768+'');
+		experimentWindow = window.open('https://'+server+'/exp.html?exp='+expName,'Popup','toolbar=no,status=no,menubar=no,scrollbars=yes,resizable=no,width='+1024+',height='+768+'');
 	}
 }
 

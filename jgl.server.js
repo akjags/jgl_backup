@@ -8,7 +8,6 @@
 // Requirements
 var app = require('express')();
 var http = require('http').Server(app);
-var io = require('socket.io')(http);
 var jsonfile = require('jsonfile');
 var api = require('mturk-api');
 var mkdirp = require('mkdirp');
@@ -19,20 +18,23 @@ const options = {
     cert: fs.readFileSync("/private/etc/apache2/gru_stanford_edu_cert.cer")
 };
 
-var https = require('http').Server(options, app);
-
+var https = require('https').Server(options, app);
+var io = require('socket.io')(https);
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////// SECURITY FUNCTIONS ////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 
 var helmet = require('helmet')
 app.use(helmet())
-
+app.use(helmet.frameguard({
+      action: 'allow-from',
+      domain: 'https://workersandbox.mturk.com'
+}));
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////// APP FUNCTIONALITY FUNCTIONS ////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
-
-// GET function
+//
+//// GET function
 app.get( '/*' , function( req, res ) {
     // this is the current file they have requested
     var file = req.params[0]; 
