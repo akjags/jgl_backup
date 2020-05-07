@@ -18,7 +18,7 @@ function loadTask() {
   task[2] = addTaskBlock(5, 1);
 
   //Number of trials per block
-  nTrialsPerBlock = 2;
+  nTrialsPerBlock = 20;
   // INSTRUCTIONS BEFORE BEGINNING REAL TRIALS 
   task[3] = {};
   task[3].type = 'instructions';
@@ -86,6 +86,7 @@ function addTaskBlock(numTrials, practice) {
   taskblock.variables.layer_name = NaN;
   taskblock.variables.pool_idx = NaN;
   taskblock.variables.poolsize = NaN;
+  taskblock.variables.origPresent = NaN;
 
 	// Segment timing
 	taskblock.segnames = ['delay','stim','feedback', 'iti'];
@@ -127,6 +128,9 @@ function startTrial() {
   // Randomly select the position (1,2, or 3) for the target.
   jgl.trial.target_position = Math.floor(Math.random()*3);
 
+  // Randomly select whether the original will be present on this trial.
+  jgl.trial.origPresent = Math.floor(Math.random()*2);
+
 }
 
 
@@ -156,7 +160,12 @@ function startSegment() {
       distPath = texDir + '/' + jgl.trial.poolsize + '_' + jgl.trial.layer_name + '_' + jgl.trial.img_name;
       texD1 = jglCreateTexture(distPath + '_smp1.png');
       texD2 = jglCreateTexture(distPath + '_smp2.png');
-      texOdd= jglCreateTexture(origDir + '/' + jgl.trial.img_name + '.png');
+
+      if (jgl.trial.origPresent==1){
+        texOdd= jglCreateTexture(origDir + '/' + jgl.trial.img_name + '.png');
+      } else {
+        texOdd = jglCreateTexture(distPath + '_smp3.png');
+      }
       texSprite1 = jglBltTexture(texD1,xPos[distLocs[0]], yPos[distLocs[0]],0, scale=scl);
       texSprite3 = jglBltTexture(texOdd,xPos[jgl.trial.target_position], yPos[jgl.trial.target_position],0, scale=scl);
       texSprite2 = jglBltTexture(texD2,xPos[distLocs[1]], yPos[distLocs[1]],0, scale=scl);
