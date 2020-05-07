@@ -15,10 +15,16 @@
     "mturk-api": "^3.0.2",
     "socket.io": "^2.1.1"
   },
+  "engines": {
+    "node": "12.13.1",
+    "npm": "6.12.1"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs:build": "documentation build assets/js/** -f html -o docs"
+    "docs:build": "documentation build assets/js/** -f html -o docs",
+    "start": "node jgl.server.js",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
