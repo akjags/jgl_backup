@@ -13,7 +13,7 @@
     "mathjs": "^5.1.0",
     "mkdirp": "^0.5.1",
     "mturk-api": "^3.0.2",
-    "socket.io": "^2.1.1"
+    "socket.io": "^2.4.0"
   },
   "engines": {
     "node": "12.13.1",
